@@ -82,6 +82,13 @@ dependencies = [
 ]
 
 [[packages]]
+name = "RhpcBLASctl"
+version = "0.23-42"
+source = { repository = "https://packagemanager.posit.co/cran/latest" }
+force_source = false
+dependencies = []
+
+[[packages]]
 name = "S7"
 version = "0.2.2"
 source = { repository = "https://packagemanager.posit.co/cran/latest" }

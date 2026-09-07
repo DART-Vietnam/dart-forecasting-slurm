@@ -21,4 +21,5 @@ dependencies = [
     "mlr3mbo",
     "DiceKriging",
     "rgenoud",
+    "RhpcBLASctl",
 ]
