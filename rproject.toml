@@ -1,0 +1,24 @@
+[project]
+name = "dart-forecasting-slurm"
+r_version = "4.5"
+
+repositories = [
+	{ alias = "PPM", url = "https://packagemanager.posit.co/cran/latest" }
+]
+
+dependencies = [
+    "tidyverse",
+    "qs2",
+    "lobstr",
+    "fs",
+    { name = "mlr3forecast", git = "https://github.com/mlr-org/mlr3forecast", commit = "f9174aa7a9cf2ebbf22c90d13d79f1d9b19ba56f" },
+    "mlr3learners",
+    "mlr3tuningspaces",
+    "future.batchtools",
+    "furrr",
+    "xgboost",
+    "ranger",
+    "mlr3mbo",
+    "DiceKriging",
+    "rgenoud",
+]
