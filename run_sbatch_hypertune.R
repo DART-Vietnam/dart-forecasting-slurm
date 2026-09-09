@@ -62,12 +62,12 @@ worker_hpo <- function(task_idx) {
   )
 
   # load data
-  print(sprintf("Hypertuning for horizon %d...", task_idx))
+  print(glue("Start hypertuning for horizon {task_idx}...", ))
 
+  print(glue("Loading data (resampling sets, task, and learner)", ))
   all_rsmps <- qs_read(TRAIN_RSMP_PATH)
   all_tasks <- qs_read(TASKS_PATH)
   all_lrners <- qs_read(LEARNERS_PATH)
-  print(sprintf("Data loaded for horizon %d", task_idx))
 
   .tsk <- all_tasks[[task_idx]]
   .lrn <- all_lrners[[task_idx]]
@@ -87,6 +87,7 @@ worker_hpo <- function(task_idx) {
     NULL
   }
 
+  print("Setting up TuningInstance and Tuner objects")
   # Setup Tuning Instance
   hpo_ti <- ti(
     task = .tsk,
